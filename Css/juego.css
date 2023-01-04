@@ -1,0 +1,232 @@
+/*PROPIEDADES GENERALES*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	user-select: none;
+
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+}
+/*Desaparecer*/
+.desaparecer {
+    display: none;
+}
+.desAnimacion {
+    animation-name: desaparecerAnimacion;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+@keyframes desaparecerAnimacion {
+    from{transform: scale(1); opacity: 100;}
+    to{transform: scale(5); opacity: 0;}
+}
+/*Aparecer*/
+.aparecer {
+    display: flex;
+}
+.apaAnimacion {
+    animation-name: aparecerAnimacion;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+@keyframes aparecerAnimacion {
+    from{transform: scale(.5); opacity: 0;}
+    to{transform: scale(1); opacity: 100;}
+}
+
+/*VARIABLES*/
+:root {
+    --main--color-naranja-p: rgb(200, 77, 0);
+    --main--color-naranja-osc: rgb(100,33,0);
+    --main--color-cheesi: #EFC820
+}
+
+/*START HEADER*/
+/*NAV*/
+
+nav {
+    width: 100%;
+    height: 70px;
+
+    border-bottom: 7px solid var(--main--color-naranja-osc);
+    background-color: var(--main--color-naranja-p);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 400;
+    padding: 20px 10px 10px 10px;
+}
+
+.contenedor-nav h2 {
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-family: 'DynaPuff', cursive;
+    margin-left: -5px;
+    transform: translateY(-5px);
+}
+
+.tema img {transform: translateY(2px);cursor: pointer;margin-left: -10px;}
+.tema {display: flex;transition: all .3s;}
+.tema:hover {color: var(--main--color-naranja-osc);}
+
+@keyframes girar {
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
+
+.girar {
+    animation: girar .3s;
+}
+
+/*START THE GAME*/
+/*----------------WELCOME TO THE GAME----------------*/
+.welcomeToGame-cont {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeToGame {
+    width: 380px;
+    height: 265px;
+    border-radius: 13px;
+    background-color: var(--main--color-naranja-osc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.welcomeToGame h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'DynaPuff';
+}
+.welcomeToGame div {
+    transform: translateY(-25px);
+}
+.welcomeToGame p{
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 3px 0 4px -37px;
+    padding: 3px 40px;
+    border-radius: 5px;
+    font-family: 'DynaPuff';
+    transition: all .3s;
+    cursor: pointer;
+} 
+.welcomeToGame p:hover {background-color: var(--main--color-naranja-p);}
+
+/*CONTENEDOR MAIN*/
+.contenedor-main{
+    width: 100%;
+    height: 450px;
+
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Imagenes/Fondo Main-Matematica.png');
+}
+
+.contenedor-juego {
+    width: 700px;
+    height: 450px;
+    transform: translateY(-70px);
+}
+
+.puntos{
+    width: 130px;
+    height: 55px;
+    border-radius: 15px;
+    border: 5px solid var(--main--color-naranja-osc);
+    background-color: white;
+    z-index: 1000;
+    text-align: center;
+    color: var(--main--color-naranja-osc);
+    margin: 5px auto;
+}
+.puntos h2, .puntos h3 {
+    font-family: 'DynaPuff';
+    margin: 0;
+}
+.puntos h2{transform: translateY(4px);}
+.puntos h3 {font-size: 25px;margin-bottom: -3px;}
+
+.pregunta-juego{
+    width: 110%;
+    height: 100px;
+    background-color: var(--main--color-naranja-osc);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+    font-size: 20px;
+    font-weight: 300;
+    box-shadow: 0 0 3px black;
+    transform: translateX(-34px);
+}
+#opciones {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--main--color-naranja-osc);
+    transition: all .3s;
+    
+    font-size: 23px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin: 9px 0;
+}
+#opciones:hover {
+    background-color: rgb(187, 127, 31);
+    transform: scaleX(1.1);
+}
+
+.opcion-1 , .opcion-2 , .opcion-3 , .opcion-4 {
+    background-color: white;
+    box-shadow: 0 0 3px black;
+}
+
+/*CAMBIAR COLOR DEL DIV*/
+.cambiarColorVerde {
+    background-color: green;  
+}
+
+.cambiarColorRojo {
+    background-color: red;
+}
+
+/*FOOTER*/
+.footer{
+    width: 100%;
+    height: 76px;
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+    border-top: 6px solid var(--main--color-naranja-osc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main--color-naranja-p);
+}
+footer img {margin: 0 25px;}

@@ -1,0 +1,544 @@
+/*PROPIEDADES GENERALES*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	user-select: none;
+
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+/*VARIABLES*/
+:root {
+    --main--color-naranja-p: rgb(200, 77, 0);
+    --main--color-naranja-osc: rgb(100,33,0);
+    --main--color-cheesi: #EFC820
+}
+
+/*START HEADER*/
+/*NAV*/
+
+nav {
+    width: 100%;
+    height: 70px;
+
+    border-bottom: 7px solid var(--main--color-naranja-osc);
+    background-color: var(--main--color-naranja-p);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 400;
+}
+
+.logo-nav {
+    margin: 7px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    z-index: 130;
+}
+
+#opc-nav{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    list-style: none;
+    margin: 0 25px;
+    letter-spacing: 4px;
+    font-family: 'DynaPuff', cursive;
+    z-index: 150;
+}
+
+.nav-1 , .nav-2 {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-1:after , .nav-2:after{
+    content: "";
+    position: absolute;
+    background-color: var(--main--color-cheesi);
+    bottom: -2px;
+    height: 3.5px;
+    border-radius: 8px;
+    left: 1px;
+    transform: scale(0);
+    transition: all 0.4s;
+}
+
+.nav-1:hover:after , .nav-2:hover:after {
+    transform: scaleX(1);
+}
+
+.nav-1.nav-1:after {width: 96px;}
+.nav-2:after {width: 113px;}
+
+/*MENU JUGAR NAV*/
+.menu-jugar-nav {
+    width: 205px; 
+    height: 204px; 
+    border-radius: 12px;
+    display: flex;
+    transform: translate(23px,8px);
+    background-color: rgba(50,15,0,.9);
+    position: absolute;
+    flex-direction: column;
+}
+
+.desaparecer{
+    display: none;
+}
+
+.menu-jugar-nav a {
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 20px;
+    transition: all .3s;
+    border-radius: 7px;
+}
+
+.menu-jugar-nav a:hover {
+    background-color: rgba(187, 127, 31, .6);
+    border-radius: 12px;
+}
+
+@keyframes mostrarMenu {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes desaparecerMenu {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.menu-juegos-activado {
+    display: flex;
+    animation: mostrarMenu .4s ease-in-out;
+}
+.desaparecerAnimacion {
+    animation: desaparecerMenu .4s ease-in-out;
+}
+
+/*HEROE*/
+.info-contenedor-main {
+    background-image: url(../Imagenes/Heroe-CHEESI.png);
+    border-bottom: 7px solid var(--main--color-naranja-osc);
+}
+.info-contenedor-main{
+    width: 100%;
+    height: 440px;
+}
+
+.img-contenedor-main img {border-bottom: 7px solid var(--main--color-naranja-osc);}
+
+/*INFO-HEROE*/
+.info-contenedor-main {
+	width: 100%;
+	height: 430px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-top: 0;
+    z-index: 11;
+}
+
+.ul-info-cont-main li {
+	font-size: 140px;
+	color: rgb(100,33,0);
+	font-family: 'Fira Sans', 'sans-serif';
+	text-align: center;
+	line-height: 1;
+}
+
+.ul-info-cont-main ul {
+	list-style: none;
+	animation-name: temas-hero;
+	animation-duration: 23s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+}
+
+#p-info-cont-main {
+    font-size: 45px;
+	color: var(--main--color-naranja-osc);
+	font-family:  'Fire Sans' , cursive;
+	line-height: 1;
+	letter-spacing: 5px;
+    margin-left: 30px;
+    transform: translateY(-10px);
+}
+
+.ul-info-cont-main {
+	width: 970px;
+	height: 145px;
+	overflow: hidden;
+    transform: translateY(-45px);
+}
+
+@keyframes temas-hero {
+	0% {margin-top: 0;}
+	5.8% {margin-top: 0;}
+
+	7.8% {margin-top: -140px;}
+    13.1% {margin-top: -140px;}
+
+	15.6% {margin-top: -280px;}
+	20.9% {margin-top: -280px;}
+
+	23.2% {margin-top: -420px;}
+	28.5% {margin-top: -420px;}
+
+	31% {margin-top: -560px;}
+	36.3% {margin-top: -560px;}
+
+	38.8% {margin-top: -700px;}
+	44.1% {margin-top: -700px;}
+
+	46.7% {margin-top: -840px;}
+    52% {margin-top: -840px;}
+
+	54.5% {margin-top: -700px;}
+	59.9% {margin-top: -700px;}
+
+	62.4% {margin-top: -560px;}
+    67.8% {margin-top: -560px;}
+
+	70.3% {margin-top: -420px;}
+	75.7% {margin-top: -420px;}
+
+	78.2% {margin-top: -280px;}
+	83.6% {margin-top: -280px;}
+
+	86.1% {margin-top: -140px;}
+	91.5% {margin-top: -140px;}
+
+	94% {margin-top: 0px;}
+	100% {margin-top: 0px;}
+}
+
+/*DIFERENTES MATERIAS*/
+/*CONTENEDORES*/
+.nivel-contenedor, .fotos-nivel-contenedor {
+    width: 100%;
+    height: 600px;
+    border-top: 7px solid var(--main--color-naranja-osc);
+    border-bottom: 7px solid var(--main--color-naranja-osc);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nivel-contenedor {
+    background-image: url(../Imagenes/Fondo-main.png);
+}
+
+.contenedor-fondo-main {
+    width: 100%;
+    height: 600px;
+}
+
+.contenedor-fondo-main img {
+    width: 100%;
+    height: 600px;
+    border-top: 7px solid var(--main--color-naranja-osc);
+}
+
+.fotos-nivel-contenedor{
+    background-color: transparent;
+}
+
+.nivel , .fotos-nivel-contenedor div {
+    background-color: var(--main-color-azul-p);
+    width: 350px;
+    height: 250px;
+    margin: 25px 30px;
+    border-radius: 15px;
+    cursor: pointer;    
+}
+
+.nivel {
+    box-shadow: 0 0 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+	text-align: center;
+}
+
+.agrandarNivel {
+    transform: scale(1.1);
+}
+
+.fotos-nivel-contenedor div {background-color: var(--main-color-azul-p); z-index: 100;}
+
+.fotos-nivel-contenedor img {
+    border-radius: 10px; 
+    cursor: pointer;
+}
+/*FOTOS DE CADA MATERIA*/
+#matematica {background-image: url(../Imagenes/Matematica-nivel1.png);}
+#lengua {background-image: url(../Imagenes/Literatura-nivel2.png);}
+#informatica {background-image: url(../Imagenes/Informatica-nivel4.png);}
+#biologia {background-image: url(../Imagenes/Biologia-nivel3.png);}
+#geografia {background-image: url(../Imagenes/Geografia-nivel5.png);}
+#premium {background-image: url(../Imagenes/Premium-nivel6.png);}
+
+/*CONTENIDO*/
+.nivel h4{
+    z-index: 112;
+    font-size: 50px;
+    line-height: 0.1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*BOTON MATERIAS EN CONTENIDO*/
+.nivel button {
+    padding: 6px 13px;
+	background-color: var(--main--color-naranja-p);
+	text-align: center;
+	color: white;
+	font-size: 17px;
+	border: 3px solid var(--main--color-naranja-osc);
+    border-radius: 10px;
+	letter-spacing: 3px;
+    font-family: 'Fira Sans', sans-serif;
+	transition: all .4s;
+    z-index: 110;
+    transform: translateY(-35px); 
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.nivel button:hover {
+    background-color: var(--main--color-naranja-osc);
+}
+
+/*---------------EQUIPO DE CHEESI------------------*/
+/*------INTRODUCCION---------*/
+.introduccionEquipo {
+    width: 100%;
+    height: 76px;
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main--color-naranja-p);
+}
+@keyframes flechaArribaAbajo {
+    0%{transform: translateY(-5px);}
+    100%{transform: translateY(5px);}
+}
+.introduccionEquipo img {
+    transform: translateY(-5px);
+    animation-name: flechaArribaAbajo;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#textoEquipoCheesi {
+    font-size: 32px;
+    font-family: 'DynaPuff', cursive;
+    color: white;
+    letter-spacing: 5px;
+}
+#textoEquipoCheesi span {color: rgb(50,15,0);}
+
+/*------DESARROLLADORES------*/
+.contenedor-desarrolladores {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(../Imagenes/Footer-Fondo.png);
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+}
+.desarrollador{
+    width: 350px;
+    height: 90px;
+    background-color: var(--main--color-naranja-osc);
+    border-radius: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*--------------ACA VA CUANDO SE EXPANDE----------------*/
+/*ANIMACION*/
+@keyframes extenderDesarrollador {
+    from{height: 90px;}
+    to{height: 250px;}
+}
+.extenderDesarrollador {
+    animation: extenderDesarrollador .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes achicarDesarrollador {
+    from{height: 250px;}
+    to{height: 90px;} 
+}
+.achicarDesarrollador {
+    animation: achicarDesarrollador .5s;
+    animation-fill-mode: forwards;
+}
+
+.desarrollador img {
+    width: 150px;
+    height: 150px;
+    margin: 18px 0 2px 0;
+}
+.desarrollador h5{
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    margin: 4px 10px 10px 0;
+    font-weight: 900; 
+    font-size: 30px; 
+    margin-bottom: -10px; 
+    color: var(--main--color-cheesi);
+}
+
+.info-exp {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: center;
+    text-align: left;
+}
+.info-exp h6{
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
+}
+
+/*ACOMODAR LOS H6*/
+#h6-1 {
+    transform: translateY(95px);
+}
+#h6-2 {
+    transform: translateY(48px);
+}
+#h6-3 {
+    transform: translateY(-87px);
+}
+#h6-3 span {color: var(--main--color-cheesi);}
+.expandirse {
+    width: 100%;
+    height: 55%;
+    background-color: var(--main--color-naranja-osc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Animacion para cuando aparezca la info*/
+@keyframes apareceInfoD {
+    from{opacity: 0; transform: scale(.8);}
+    to{opacity: 100; transform: scale(1);}
+}
+@keyframes desapareceInfoD {
+    from{opacity: 100; transform: scale(1);}
+    to{opacity: 0; transform: scale(0);}
+}
+.desaparecer {
+    animation: desapareceInfoD .5s; 
+    animation-fill-mode: forwards;
+}
+.aparecer {
+    animation: apareceInfoD .19s;
+}
+
+.noexpandirse {display: none;}
+
+.contenedorImg-exp {
+    width: 134px;
+    height: 135px;
+    background-color: white;
+    border-radius: 5px;
+    transform: translate(-20px,3px);
+}
+
+.contenedorImg-exp img {
+    transform: scale(0.9);
+    margin-left: -8px;
+    margin-top: -7px;
+}
+
+/*ANIMACION*/
+@keyframes extenderContenedor {
+    from{height: 200px;}
+    to{height: 300px;}
+}
+
+.extenderContenedorD {
+    animation: extenderContenedor .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes achicarContenedor {
+    from{height: 300px;}
+    to{height: 200px;} 
+}
+
+.achicarContenedorD {
+    animation: achicarContenedor .5s;
+    animation-fill-mode: forwards;
+}
+
+/*BOTON DESARROLLAR*/
+.desarrollador button {
+    width: 60px;
+    height: 35px;
+    border: 3px solid rgb(50,15,0);
+    border-radius: 15px;
+    background-color: var(--main--color-cheesi);
+    transform: translateY(10px);
+    cursor: pointer;
+    font-family: 'DynaPuff', cursive;
+    font-size: 15px;
+    color: var(--main--color-naranja-osc);
+    transition: all .3s;
+    transform: translateY(-1px);
+} 
+.desarrollador button:hover {
+    background-color: var(--main--color-naranja-p);
+    color: white;
+}
+
+/*FOOTER*/
+.footer{
+    width: 100%;
+    height: 76px;
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main--color-naranja-p);
+}
+footer img {margin: 0 25px;}

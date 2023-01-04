@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FUENTES-->
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Edu+SA+Beginner:wght@700&family=Fira+Sans:wght@500&family=Oswald:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../Css/juego.css">
+
+    <title>CHEESI</title>
+    <link rel="icon" href="../Imagenes/pingi.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+        <!--COMIENZO NAV-->
+            <div class="contenedor-nav">
+                <!--PARTE IZQUIERDA DEL NAV-->
+                <div class="tema">
+
+                    <a href="../index.html">
+                        <img class="img-girar" src="../Imagenes/volverAlMenu.png" alt="Flecha">
+                    </a>
+
+                    <h2>VOLVER</h2>
+                </div>
+
+                <!--PARTE DERECHA DEL NAV-->
+                <div class="logo-nav">
+                    <img src="../Imagenes/Logo-Cheesi.png" alt="">
+                </div>
+            </div>
+
+            <!--AVISO DE BIENVENIDA (POSITION ABSOLUTE)-->
+            <div class="welcomeToGame-cont">
+                <div class="welcomeToGame apaAnimacion">
+                    <h2 id="WGT-h2">¡ELEGI EL JUEGO!</h2>
+                    <div>
+                        <p id="WGT-p">MATEMATICA</p>
+                        <p id="WGT-p">LENGUA</p>
+                        <p id="WGT-p">INFORMATICA</p>
+                        <p id="WGT-p">BIOLOGIA</p>
+                        <p id="WGT-p">GEOGRAFIA</p>
+                        <p id="WGT-p">PREMIUM</p>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <!--COMIENZO DEL MAIN-->
+        <div class="contenedor-main">
+            <div class="contenedor-juego desaparecer">
+
+                <div class="puntos">
+                    <h2>Puntos</h2>
+                    <h3>0</h3>
+                </div>
+
+                <div class="pregunta-juego">
+                    <h2></h2>
+                </div>
+
+                <div id="opciones" class="opcion-1"></div>
+                <div id="opciones" class="opcion-2"></div>
+                <div id="opciones" class="opcion-3"></div>
+                <div id="opciones" class="opcion-4"></div>
+
+            </div>
+        </div>        
+    </main>
+
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/totocaminia/?next=%2F" target="_blank"><img src="../Imagenes/instagram.png" alt=""></a>
+            <a href="https://twitter.com/TotoCamina" target="_blank"><img src="../Imagenes/twitter.png" alt=""></a>
+            <a href="https://walink.co/46e157" target="_blank"><img src="../Imagenes/whatsapp.png" alt=""></a> 
+        </div>
+    </footer>
+    
+
+    <script  src="../JavaScript/juego.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

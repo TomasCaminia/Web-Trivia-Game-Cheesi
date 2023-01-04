@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FUENTES-->
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Edu+SA+Beginner:wght@700&family=Fira+Sans:wght@500&family=Oswald:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Css/index.css">
+
+    <title>CHEESI</title>
+    <link rel="icon" href="./Imagenes/pingi.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+        <!--COMIENZO NAV-->
+            <div class="contenedor-nav">
+                <!--PARTE IZQUIERDA DEL NAV-->
+                <div class="logo-nav">
+                    <a href="index.html"><img src="./Imagenes/Logo-Cheesi.png" alt="Logo de CHEESI"></a>
+                </div>
+
+                <!--PARTE DERECHA DEL NAV-->
+                <div class="opciones-nav">
+   
+                    <p id="opc-nav" class="nav-1" href="./Html/juego.html" onclick="aparecerMenu()">JUGAR</p>
+                        <div class="menu-jugar-nav desaparecer">
+                            <a href="./Html/juego.html">MATEMATICA</a>
+                            <a href="./Html/juego.html">LENGUA</a>
+                            <a href="./Html/juego.html">INFORMATICA</a>
+                            <a href="./Html/juego.html">BIOLOGIA</a>
+                            <a href="./Html/juego.html">GEOGRAFIA</a>
+                            <a href="./Html/juego.html">PREMIUM</a>
+                        </div>
+            
+                    <a id="opc-nav" class="nav-2" href="./Html/cuenta.html">CUENTA</a>
+                </div>
+            </div>
+        <!--FIN DEL NAV-->
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="info-contenedor-main">
+            <p id="p-info-cont-main">preguntas de</p>
+
+			<div class="ul-info-cont-main">
+				<ul>
+					<li>MATEMATICA</li>
+					<li>LITERATURA</li>
+					<li>BIOLOGIA</li>
+					<li>INFORMATICA</li>
+					<li>GEOGRAFIA</li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+        </div>
+
+    </section>
+
+    <!--NIVELES-->
+    <section class="nivel-contenedor">
+        <div class="nivel" id="matematica">
+            <h4>MATEMATICA</h4>
+
+                <button onclick="window.location.href = './Html/juego.html'">
+                    ENTRAR
+                </button>
+        </div>
+
+        <div class="nivel" id="lengua">
+            <h4>LITERATURA</h4>
+
+                <button onclick="window.location.href = './Html/juego.html'">
+                    ENTRAR
+                </button>
+        </div>
+
+        <div class="nivel" id="informatica">
+            <h4>INFORMATICA</h4>
+
+                <button onclick="window.location.href = './Html/juego.html'">
+                    ENTRAR
+                </button>
+        </div>
+
+        <div class="nivel" id="biologia">
+            <h4>BIOLOGIA</h4>
+                <button onclick="window.location.href = './Html/juego.html'">
+                    ENTRAR
+                </button>
+        </div>
+
+        <div class="nivel" id="geografia">
+            <h4>GEOGRAFIA</h4>
+
+                <button onclick="window.location.href = './Html/juego.html'">
+                    ENTRAR
+                </button>
+        </div>
+
+        <div class="nivel" id="premium">
+            <h4>PREMIUM</h4>
+
+                <button onclick="window.location.href = './Html/juego.html'">
+                    ENTRAR
+                </button>
+        </div>
+
+    </section>
+    
+    <!--SECCION EN LA QUE SE MUESTRAN EL EQUIPO DE CHEESI-->
+        <!--INTRODUCCION = desarrolladores-->
+
+        <div class="introduccionEquipo">
+            <img src="./Imagenes/flecha-equipoCheesi.png" alt="">
+            <h5 id="textoEquipoCheesi">EQUIPO DE <span>CHEESI</span></h5>
+            <img src="./Imagenes/flecha-equipoCheesi.png" alt="">
+        </div>
+    
+        <!--ACA SE MUESTRAN LOS DIVERSOS INTEGRANTES DEL EQUIPO DE CHEESI-->
+        
+        <section class="contenedor-desarrolladores">
+            
+            <div class="desarrollador" id="desarrollador-1">
+                <h5></h5>
+
+                <div class="expandirse noexpandirse" id="expD-1" >
+                    <div class="info-exp">
+                       
+                    </div>
+                    
+                    <div class="contenedorImg-exp">
+                        <img src="./Imagenes/desarrollador1-foto.png" alt="">
+                    </div>
+                </div>
+
+                <button>INFO</button>
+  
+            </div>
+        
+            <div class="desarrollador" id="desarrollador-2">
+                <h5></h5>
+
+                <div class="expandirse noexpandirse" id="expD-2">
+                    <div class="info-exp">
+                       
+                    </div>
+                    
+                    <div class="contenedorImg-exp">
+                        <img src="./Imagenes/desarrollador1-foto.png" alt="">
+                    </div>
+                </div>
+
+                <button>INFO</button>
+  
+            </div>
+    
+            <div class="desarrollador" id="desarrollador-3">
+                <h5></h5>
+
+                <div class="expandirse noexpandirse" id="expD-3">
+                    <div class="info-exp">
+                       
+                    </div>
+                    
+                    <div class="contenedorImg-exp">
+                        <img src="./Imagenes/desarrollador1-foto.png" alt="">
+                    </div>
+                </div>
+
+                <button>INFO</button>
+  
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/totocaminia/?next=%2F" target="_blank"><img src="./Imagenes/instagram.png" alt=""></a>
+            <a href="https://twitter.com/TotoCamina" target="_blank"><img src="./Imagenes/twitter.png" alt=""></a>
+            <a href="https://walink.co/46e157" target="_blank"><img src="./Imagenes/whatsapp.png" alt=""></a> 
+        </div>
+    </footer>
+    
+    <script src="./JavaScript/index.js"></script>
+
+    
+</body>
+
+</html>

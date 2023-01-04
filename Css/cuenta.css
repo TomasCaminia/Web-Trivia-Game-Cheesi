@@ -1,0 +1,312 @@
+/*PROPIEDADES GENERALES*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	user-select: none;
+    text-decoration: none;
+    list-style: none;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgb(187, 127, 31);
+    
+}
+
+/*VARIABLES*/
+:root {
+    --main--color-naranja-p: rgb(200, 77, 0);
+    --main--color-naranja-osc: rgb(100,33,0);
+    --main--color-cheesi: #EFC820
+}
+
+/*-----------------------------HEADER*-----------------------------/
+/*-------------------NAV-------------------*/
+/*CONTENEDOR NAV Y LETRAS*/
+nav {
+    width: 100%;
+    height: 70px;
+
+    border-bottom: 7px solid var(--main--color-naranja-osc);
+    background-color: var(--main--color-naranja-p);
+
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 400;
+    padding: 20px 10px 10px 10px;
+}
+.contenedor-nav h2 {
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-family: 'DynaPuff', cursive;
+    margin-left: -5px;
+    transform: translateY(-5px);
+}
+
+/*ANIMACION VOLVER*/
+.botonVolver img {
+    transform: translateY(2px);
+    cursor: pointer;
+    margin-left: -10px;
+}
+.botonVolver {
+    display: flex;
+    transition: all .3s;
+    color: white;
+}
+.botonVolver:hover {color: var(--main--color-naranja-osc);}
+
+/*ANIMACIOM GIRAR*/
+@keyframes girar {
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}}
+.girar {animation: girar .3s;}
+
+/*-----------------------------MAIN-----------------------------*/
+/*-------------------CUENTA-------------------*/
+.contenedor-cuenta {
+    width: 100%;
+    height: 448px;
+    position: absolute;
+    background-color: rgb(187, 127, 31);
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+}
+
+/*--Animaciones = aparecer y desaparecer--*/
+@keyframes apareceOpacity {
+    from{opacity: 0;}
+    to{opacity: 100;}
+}
+.apareceOpacityAnimacion {animation: apareceOpacity .5s;}
+
+@keyframes desapareceOpacity {
+    from{opacity: 100;}
+    to{opacity: 0;}
+}
+.desapareceOpacityAnimacion {animation: desapareceOpacity .5s;}
+
+#h2Cuenta{
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    margin: 0 7px;
+    color: var(--main--color-naranja-osc);
+} 
+.miCuenta {
+    position: absolute;
+    transform: translate(16px,22px);
+    display: flex;
+}
+.miCuenta img {
+    width: 40px;
+    height: 40px;
+    transform: translateY(5px);
+}
+
+/*DATOS MOSTRADOS EN MAIN*/
+.contenedorDatos-cuenta {
+    transform: translate(16px,90px);
+}
+.cuenta {
+    width: 100%;
+}
+.cuenta p {
+    font-size: 29px;
+    letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    display: inline;
+    color:  rgb(150,45,0);
+}
+#datos {
+    color: var(--main--color-naranja-osc);
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 7px;
+}
+
+/*-------------------LOGIN-------------------*/
+.contenedor-iS , .contenedor-registrarse{
+    width: 100%;
+    height: 448px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+    position: absolute;
+}
+.iniciar-sesion , .registrarse{
+    width: 300px;
+    height: 385px;
+    border-radius: 12px;
+    background-color: var(--main--color-naranja-osc);
+    z-index: 100;
+    text-align: center;
+    animation-name: aparecer;
+    animation-duration: .5s;
+} 
+
+@keyframes aparecer {
+    from{opacity: 0;transform: scale(0.5)}
+    to{opacity: 100;transform: scale(1);}
+}
+.aparecer {
+    display: block;
+}
+
+@keyframes desaparecer {
+    from{opacity: 100; transform: scale(1);}
+    to{opacity: 0; transform: scale(.5);}
+}
+.desaparecerAnimacion{
+    animation-name: desaparecer;
+    animation-duration: .5s;
+}
+.desaparecer{
+    display: none;
+}
+
+/*TEXTO*/
+.texto-iS h3 , .texto-iS h4 , .contenedor-registrarse h3 {
+    font-size: 55px;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+} 
+.texto-iS h4 {
+    font-size: 60px; 
+    color: var(--main--color-cheesi);
+    margin-top: -87px;
+}
+.texto-iS {transform: translateY(-50px);
+}
+.iniciar-sesion p , .registrarse p {
+    font-size: 27px;
+    color: white;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 600;
+}
+.contenedor-texto-iS {
+    transform: translateY(-145px);
+} 
+#p-registrarme , #p-iniciarSesion {
+    font-size: 17px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    color: var(--main--color-cheesi);
+    margin-top: -20px;
+}
+/*INPUTS*/
+.input-2{transform: translateY(-185px);
+}
+.contenedor-texto-iS p , .contenedor-texto-reg p{
+    text-align: left;
+    transform: translate(28px,3px);
+}
+.contenedor-texto-iS input , .contenedor-texto-reg input{
+    width: 228px;
+    height:35px;
+    border-radius: 9px;
+    border: 3px solid black;
+    transform: translateY(-20px);
+    transition: all .3s;
+    padding: 0 8px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+#botonEnviar {
+    width: 100px;
+    height: 40px;
+    background-color: var(--main--color-cheesi);
+    color: var(--main--color-naranja-osc);
+    border-radius: 7px;
+    border: 3px solid black;
+    cursor: pointer;
+    transform: translateY(-193px);
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all .3s;
+}
+#botonEnviar:hover , #botonEnviar-reg:hover {
+    background-color: rgb(187, 127, 31);
+    color: var(--main--color-naranja-osc);
+}
+::placeholder{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+/*-----------------REGISTRARSE-----------------*/
+.contenedor-registrarse {
+    position: relative;
+}
+.contenedor-registrarse p {
+    transform: translate(17px,6px);
+}
+.registrarse {
+    width: 330px;
+    height: 455px;
+    border-radius: 0;
+}
+.contenedor-registrarse h3 {
+    font-size: 43px; 
+    letter-spacing: 1px;
+    transform: translateY(-40px);
+    color: var(--main--color-cheesi);
+}
+.contenedor-texto-reg input {
+    width: 280px;
+}
+.input1 {
+    transform: translateY(-92px);
+}
+.input2 {
+    transform: translateY(-137px);
+}
+.input3 {
+    transform: translateY(-184px);
+}
+.input4 {
+    transform: translateY(-227px);
+}
+#p-iniciarSesion {
+    transform: translate(17px,2px);
+}
+
+#botonEnviar-2 {
+    width: 100px;
+    height: 40px;
+    background-color: var(--main--color-cheesi);
+    color: var(--main--color-naranja-osc);
+    border-radius: 7px;
+    border: 3px solid black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all .3s;
+    transform: translateY(-240px);
+}
+
+/*FOOTER*/
+.footer{
+    width: 100%;
+    height: 79px;
+    border-bottom: 6px solid var(--main--color-naranja-osc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main--color-naranja-p);
+}
+footer img {margin: 0 25px;}
